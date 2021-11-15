@@ -21,7 +21,7 @@ export default function Mail() {
     });
     try {
       await axios
-        .post("http://localhost:3001/sendemail", {
+        .post(process.env.REACT_APP_DOMAIN, {
           email: email,
           message: message,
           from: email,
